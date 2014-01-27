@@ -54,8 +54,8 @@ int get_change (int * pDenomination, int pSize, int pChangeOf)
     if (pSize <= 0)
         return 0;
         
-    //Number of solution = number of solution for amount n with m-1 coins +
-    //number of solution for amount - mth coin for all possible coins.
+    //Number of solution = number of solution for amount n with pSize-1 coins +
+    //number of solution for amount - pSize-th coin for all possible coins.
     return  get_change(pDenomination,
                        pSize - 1,
                        pChangeOf) 
