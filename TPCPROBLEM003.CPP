@@ -137,33 +137,32 @@ void Solver_Men (int pref [][4], int * pGreedyMen, int numberofpairs)
 			//check preference of girl that boy selected. and reject or accept offer
 			if (LookUpPreference(pref[men], girl + NUM_COUPLE, numberofpairs) < LookUpPreference(pref[men], pGreedyMen[men], numberofpairs)) {
 
-						//extract the old preference
-						int temp = pGreedyMen[men];
+				//extract the old preference
+				int temp = pGreedyMen[men];
 
-						//set new pref women to not available
-						women_avail[girl] = false;
+				//set new pref women to not available
+				women_avail[girl] = false;
 
-						//set old pref to avaialble if applicable
-						if (temp < 2*NUM_COUPLE)
-							women_avail[temp] = true;
+				//set old pref to avaialble if applicable
+				if (temp < 2*NUM_COUPLE)
+					women_avail[temp] = true;
 
-						//set new pref
-						pGreedyMen[men]	=	girl + NUM_COUPLE;
+				//set new pref
+				pGreedyMen[men]	=	girl + NUM_COUPLE;
 
 
-						break;
+				break;
 
-					}
 			}
-
-
-
+		}
 
 	}
 
-
-
 }
+
+
+
+
 
 //Solving considering women will choose among all men
 void Solver_Women (int pref [][NUM_COUPLE], int * pGreedyWomen, int numberofpairs)
