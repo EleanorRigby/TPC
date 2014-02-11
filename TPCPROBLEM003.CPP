@@ -1,6 +1,5 @@
-
 //============================================================================
-// Name        : stable wedding.cpp
+// Name        : TPCPROBLEM003.cpp
 // Author      : Tushar
 // Version     :
 // Copyright   : Your copyright notice
